@@ -29,11 +29,11 @@
 
 /* Before/After Sliders */
 document.querySelectorAll('[data-compare]').forEach(slider => {
-  const wrap   = slider.querySelector('.compare-before-wrap');
+  const before = slider.querySelector('.compare-before');
   const handle = slider.querySelector('.compare-handle');
   const range  = slider.querySelector('.compare-range');
   function set(v){
-    wrap.style.width  = v + '%';
+    before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
     handle.style.left = v + '%';
   }
   set(50);
